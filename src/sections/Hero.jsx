@@ -1,71 +1,59 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { PerspectiveCamera } from "@react-three/drei";
-import { Leva, useControls } from "leva";
-import { useMediaQuery } from "react-responsive"; // Import useMediaQuery
+import { useMediaQuery } from "react-responsive";
 import CanvasLoader from "../components/CanvasLoader";
 import HackerRoom from "../components/HackerRoom";
+import HeroCamera from "../components/HeroCamera";
+import Button from '../components/Button.jsx';
+
+const calculateSizes = (isSmall, isMobile, isTablet) => {
+  if (isSmall) {
+    return {
+      deskPosition: [1, -5, 3], 
+      deskScale: [0.05, 0.05, 0.05],
+    };
+  } else if (isMobile) {
+    return {
+      deskPosition: [2, -7, 2], 
+      deskScale: [0.07, 0.07, 0.07],
+    };
+  } else if (isTablet) {
+    return {
+      deskPosition: [2, -8, 2], 
+      deskScale: [0.08, 0.08, 0.08],
+    };
+  } else {
+    return {
+      deskPosition: [2, -8, 4], 
+      deskScale: [0.09, 0.09, 0.09],
+    };
+  }
+};
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 }); // Check for mobile screens
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-//   const x = useControls("HackerRoom", {
-//     positionX: {
-//       value: 1.4,
-//       min: -10,
-//       max: 10,
-//     },
-//     positionY: {
-//       value: 0,
-//       min: -10,
-//       max: 10,
-//     },
-//     positionZ: {
-//       value: 5.8,
-//       min: -10,
-//       max: 10,
-//     },
-//     rotationX: {
-//       value: 0.4,
-//       min: -10,
-//       max: 10,
-//     },
-//     rotationY: {
-//       value: 3.2,
-//       min: -10,
-//       max: 10,
-//     },
-//     rotationZ: {
-//       value: 0,
-//       min: -10,
-//       max: 10,
-//     },
-//     scale: {
-//       value: 0.08,
-//       min: -10,
-//       max: 10,
-//     },
-//   });
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className="min-h-screen w-full flex flex-col relative">
       {/* 3D Canvas */}
       <div className="w-full h-full absolute inset-0 z-10">
-        <Leva />
         <Canvas>
           <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera
-              makeDefault
-              position={isMobile ? [0, 5, 30] : [0, 5, 30]} // No change to values
-            />
-            <HackerRoom
-              position={[2, -3, 2]} // No change to values
-              rotation={[0, -Math.PI, 0]} // No change to values
-              scale={[0.1, 0.1, 0.1]} // No change to values
-            />
-            <ambientLight intensity={2} />
-            <directionalLight position={[10, 10, 10]} intensity={1} />
+            <HeroCamera isMobile={isMobile}>
+              <HackerRoom
+                scale={sizes.deskScale}
+                position={sizes.deskPosition} // Updated desk position
+                rotation={[0.1, -Math.PI, 0]}
+              />
+            </HeroCamera>
+
+            {/* Lighting */}
+            <ambientLight intensity={3} />
+            <directionalLight position={[10, 10, 10]} intensity={3} />
           </Suspense>
         </Canvas>
       </div>
@@ -75,10 +63,16 @@ const Hero = () => {
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
           Hi, I'm Neha <span className="waving-hand">👋🏼</span>
         </p>
-        <p className="text-2xl font-semibold text-gray-300 text-center">
+        <p className="text-6xl font-semibold text-gray-300 text-center">
           I'm a Data Scientist
         </p>
       </div>
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className="w-fit">
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
+      </div>
+
     </section>
   );
 };
