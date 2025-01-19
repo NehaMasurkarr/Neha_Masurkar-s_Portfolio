@@ -9,22 +9,22 @@ import Button from '../components/Button.jsx';
 const calculateSizes = (isSmall, isMobile, isTablet) => {
   if (isSmall) {
     return {
-      deskPosition: [1, -5, 3], 
+      deskPosition: [0, -5, 3], 
       deskScale: [0.05, 0.05, 0.05],
     };
   } else if (isMobile) {
     return {
-      deskPosition: [2, -7, 2], 
+      deskPosition: [0, -7, 2], 
       deskScale: [0.07, 0.07, 0.07],
     };
   } else if (isTablet) {
     return {
-      deskPosition: [2, -8, 2], 
+      deskPosition: [0, -8, 2], 
       deskScale: [0.08, 0.08, 0.08],
     };
   } else {
     return {
-      deskPosition: [2, -8, 4], 
+      deskPosition: [0, -8, 4], 
       deskScale: [0.09, 0.09, 0.09],
     };
   }
