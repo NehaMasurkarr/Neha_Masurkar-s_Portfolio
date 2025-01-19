@@ -4,27 +4,27 @@ import { useMediaQuery } from "react-responsive";
 import CanvasLoader from "../components/CanvasLoader";
 import HackerRoom from "../components/HackerRoom";
 import HeroCamera from "../components/HeroCamera";
-import Button from '../components/Button.jsx';
+import Button from "../components/Button.jsx";
 
 const calculateSizes = (isSmall, isMobile, isTablet) => {
   if (isSmall) {
     return {
-      deskPosition: [0, -5, 3], 
+      deskPosition: [0, -5, 3],
       deskScale: [0.05, 0.05, 0.05],
     };
   } else if (isMobile) {
     return {
-      deskPosition: [0, -7, 2], 
+      deskPosition: [0, -7, 2],
       deskScale: [0.07, 0.07, 0.07],
     };
   } else if (isTablet) {
     return {
-      deskPosition: [0, -8, 2], 
+      deskPosition: [0, -8, 2],
       deskScale: [0.08, 0.08, 0.08],
     };
   } else {
     return {
-      deskPosition: [0, -8, 4], 
+      deskPosition: [0, -8, 4],
       deskScale: [0.09, 0.09, 0.09],
     };
   }
@@ -38,7 +38,7 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative">
+    <section className="min-h-screen w-full flex flex-col relative" id="home">
       {/* 3D Canvas */}
       <div className="w-full h-full absolute inset-0 z-10">
         <Canvas>
@@ -46,7 +46,7 @@ const Hero = () => {
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
                 scale={sizes.deskScale}
-                position={sizes.deskPosition} // Updated desk position
+                position={sizes.deskPosition}
                 rotation={[0.1, -Math.PI, 0]}
               />
             </HeroCamera>
@@ -69,10 +69,13 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
         <a href="#contact" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-96"
+          />
         </a>
       </div>
-
     </section>
   );
 };

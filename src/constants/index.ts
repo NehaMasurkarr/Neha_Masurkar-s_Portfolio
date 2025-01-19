@@ -21,40 +21,40 @@ export const navLinks = [
     },
   ];
   
-  export const clientReviews = [
-    {
-      id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
-      img: 'assets/review1.png',
-      review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-      id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
-      img: 'assets/review2.png',
-      review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-      id: 3,
-      name: 'John Dohsas',
-      position: 'Project Manager at UrbanTech ',
-      img: 'assets/review3.png',
-      review:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-      id: 4,
-      name: 'Ether Smith',
-      position: 'CEO of BrightStar Enterprises',
-      img: 'assets/review4.png',
-      review:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-  ];
+  // export const clientReviews = [
+  //   {
+  //     id: 1,
+  //     name: 'Emily Johnson',
+  //     position: 'Marketing Director at GreenLeaf',
+  //     img: 'assets/review1.png',
+  //     review:
+  //       'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Mark Rogers',
+  //     position: 'Founder of TechGear Shop',
+  //     img: 'assets/review2.png',
+  //     review:
+  //       'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'John Dohsas',
+  //     position: 'Project Manager at UrbanTech ',
+  //     img: 'assets/review3.png',
+  //     review:
+  //       'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Ether Smith',
+  //     position: 'CEO of BrightStar Enterprises',
+  //     img: 'assets/review4.png',
+  //     review:
+  //       'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+  //   },
+  // ];
   
   export const myProjects = [
     {
@@ -237,6 +237,34 @@ export const navLinks = [
   
       ],
     },
+
+    {
+      title: 'HR Analytics Dashboard for Employee Attrition',
+      desc: 'Designed and developed an advanced HR Analytics Dashboard using Power BI, analyzing data from 1,470 employees to provide actionable insights into workforce trends and attrition patterns. Achieved a 16.12% attrition rate analysis with detailed visualizations across key metrics. Identified critical trends , highlighted role-specific and education-based attrition insights, empowering HR teams to make data-driven decisions and improve retention strategies, enhancing overall organizational performance.',
+      // subdesc:
+      //   '',
+      href: 'https://github.com/NehaMasurkarr/Interactive-HR-Analytics-Dashboard-for-Employee-Attrition',
+      texture: '/textures/project/project5.mp4',
+      logo: '/assets/powerbi.svg',
+      logoStyle: {
+        backgroundColor: '#1C1A43',
+        border: '0.2px solid #252262',
+        boxShadow: '0px 0px 60px 0px #635BFF4D',
+      },
+      spotlight: '/assets/spotlight5.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Power BI',
+          path: '/assets/powerbi.svg',
+        },
+        {
+          id: 2,
+          name: 'SQL',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
+        },
+      ],
+    },
     {
       title: 'Interactive Pizza Sales Insights with Power BI and SQL',
       desc: 'Created an interactive Power BI dashboard analyzing $817.86K in revenue and 49,574 pizzas sold across 869 cities. Integrated with an SQL database via SSMS, the dashboard includes slicers and navigation for exploring key metrics like order trends, category performance, and size preferences. Delivered actionable insights into peak periods and top-performing products, driving data-informed sales strategies and improved profitability.',
@@ -262,6 +290,50 @@ export const navLinks = [
           name: 'SQL',
           path: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
         },
+      ],
+    },
+
+    {
+      title: 'Decentralized Crowdfunding Platform for Digital Creators',
+      desc: 'Developed a blockchain-based crowdfunding application using Solidity, enabling digital creators to retain financial control and directly engage with their audience for funding. Designed and implemented a proposed voting system to enhance transparency and decision-making. Deployed on the Celo Test Network (Infura Network), integrating Ethereum Smart Contracts and Web3.js for seamless blockchain interactions. Leveraged Next.js for the frontend and MetaMask Wallet for secure and efficient transactions. Resulted in an innovative platform empowering content creators with a decentralized funding solution.',
+      // subdesc:
+      //   'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+      href: 'https://github.com/NehaMasurkarr/Creator-Economy-using-Blockchain',
+      texture: '/textures/project/project4.mp4',
+      logo: '/assets/blockchain.svg',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #0E2D58',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Power BI',
+          path: '/assets/blockchain.svg',
+        },
+        {
+          id: 2,
+          name: 'Solidity',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Solidity_logo.svg',
+        },
+        {
+          id: 3,
+          name: 'Ethereum',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Ethereum-icon-purple.svg',
+        },
+        {
+          id: 4,
+          name: 'MetaMask',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg',
+        },
+        {
+          id: 5,
+          name: 'Next.js',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg',
+        },
+        
       ],
     },
   ];
