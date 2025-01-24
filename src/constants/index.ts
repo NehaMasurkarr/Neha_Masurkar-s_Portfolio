@@ -336,6 +336,91 @@ export const navLinks = [
         
       ],
     },
+    {
+      title: 'Spotify Music Trends and Performance Dashboard ',
+      desc: 'Created an interactive Power BI dashboard to analyze 4 billion Spotify streams, providing in-depth insights into music trends, user behavior, and track performance. Implemented advanced dynamic filters for date, artist, and track categories, enabling granular data exploration. Integrated analytics to highlight average annual streams, top-performing tracks, and energy metrics for individual songs, empowering data-driven decision-making for music strategies.',
+      // subdesc:
+      //   'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+      href: 'https://github.com/NehaMasurkarr/Advanced-Spotify-Power-BI-Project-',
+      texture: '/textures/project/project4.mp4',
+      logo: '/assets/powerbi.svg',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #0E2D58',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Power BI',
+          path: '/assets/powerbi.svg',
+        },
+        {
+          id: 2,
+          name: 'SQL',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
+        },
+  
+      ],
+    },
+    {
+      title: 'Amazon Sales Insights Dashboard',
+      desc: 'Developed an interactive Power BI dashboard to evaluate 120.5K Amazon sales, offering comprehensive insights into sales trends across cities and states. Designed advanced dynamic filters for shipment status and sales units, enabling detailed exploration of data. Incorporated analytics to showcase seller performance, regional patterns, and key metrics, supporting data-driven strategies to enhance sales and product outcomes.',
+      // subdesc:
+      //   'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+      href: 'https://github.com/NehaMasurkarr/Amazon_PowerBi_Dashboard',
+      texture: '/textures/project/project4.mp4',
+      logo: '/assets/powerbi.svg',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #0E2D58',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Power BI',
+          path: '/assets/powerbi.svg',
+        },
+        {
+          id: 2,
+          name: 'SQL',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
+        },
+  
+      ],
+    },
+
+    {
+      title:'Google Trends Insights Dashboard' ,
+      desc: 'Designed a Power BI dashboard to explore global Google Trends data, to analyze 28,000 search queries across various keywords and categories, delivering detailed insights into rising and top-performing keywords across categories such as careers, education, and technology. Integrated dynamic filters for date, keyword type, and region, enabling precise trend analysis.  ',
+      // subdesc:
+      //   'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+      href: 'https://github.com/NehaMasurkarr/Google-Trends-Insights-Dashboard',
+      texture: '/textures/project/project4.mp4',
+      logo: '/assets/powerbi.svg',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #0E2D58',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Power BI',
+          path: '/assets/powerbi.svg',
+        },
+        {
+          id: 2,
+          name: 'SQL',
+          path: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
+        },
+  
+      ],
+    },
   ];
   
   
